@@ -1,0 +1,29 @@
+<h1> Nested attributes </h1>
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+<br>
+
+<%= link_to :nested_attributes, "", class: "btn btn-primary" %>
+<%= link_to :form_object, "", class: "btn btn-primary" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Email</th>
+      <th>Company name</th>
+      <th>Company address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.company_name %></td>
+        <td><%= user.company_address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
