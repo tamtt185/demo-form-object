@@ -1,0 +1,29 @@
+<div class="container">
+  <h1> Tạo User sử dụng Form object </h1>
+
+  <%= form_for @registration, html: {class: "form-horizontal"} do |f| %>
+    <%= render "shared/errors_messages", object: f.object %>
+
+    <div class="form-group">
+      <%= f.label :user_name, t(".user_name"), class: "col-md-2 control-label" %>
+      <%= f.text_field :user_name %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, t(".email"), class: "col-md-2 control-label" %>
+      <%= f.text_field :email %>
+    </div>
+      <div class="form-group">
+      <%= f.label :password, t(".password"), class: "col-md-2 control-label" %>
+      <%= f.text_field :password %>
+    </div>
+    <div class="form-group">
+      <%= f.label :company_name, t(".company_name"), class: "col-md-2 control-label" %>
+      <%= f.text_field :company_name %>
+    </div>
+    <div class="form-group">
+      <%= f.label :company_address, t(".company_address"), class: "col-md-2 control-label" %>
+      <%= f.text_field :company_address %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>
