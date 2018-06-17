@@ -1,0 +1,6 @@
+<% object.errors.full_messages.each do |message| %>
+  <p class="inner-content">
+    <i class="mp-icon-alert ion-alert-circled"></i>
+    <span class="text-inside"><%= message.html_safe %></span>
+  </p>
+<% end %>
